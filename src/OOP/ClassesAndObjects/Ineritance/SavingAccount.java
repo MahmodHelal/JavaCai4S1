@@ -1,14 +1,11 @@
 package OOP.ClassesAndObjects.Ineritance;
 
 public class SavingAccount extends Account {
-    private double interestRate;
+    static private double interestRate;
 
-
-    public SavingAccount(String accountNumber, double balance, String accountOwner,double interestRate){
-        super(accountNumber,balance,accountOwner);
-        this.interestRate = interestRate;
+    public SavingAccount(String accountNumber, double balance, String accountOwner) {
+        super(accountNumber, balance, accountOwner);
     }
-
 
 
     void addInterest(){
@@ -20,8 +17,13 @@ public class SavingAccount extends Account {
     void displayAccountInfo(){
         super.displayAccountInfo();
         System.out.println("Interest Rate: " + interestRate);
+        if (1 < 2 ){
+            if (2<1){
+                System.out.println("Make a mistake");
+            }
+        }
 
     }
 
 
-}
+}// nonReachable code

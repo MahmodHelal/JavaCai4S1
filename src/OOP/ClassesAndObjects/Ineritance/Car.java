@@ -1,9 +1,22 @@
 package OOP.ClassesAndObjects.Ineritance;
 
-public class Car extends Vehicle {
+public class Car {
+    String model;
+    int year;
+    String color;
+    Engine engine; //composition
 
-void destination(String destination){
-    System.out.println("Car is going to " +destination);
-}
+
+
+    void start(){
+        engine.start();
+    }
+
+
+    void displayInfo(){
+        System.out.println(model +"has "+ engine.horsePower +"CC");
+    }
+
+
 
 }

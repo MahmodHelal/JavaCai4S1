@@ -7,22 +7,28 @@ public class Account {
 
 
     public Account(String accountNumber, double balance, String accountOwner){
+        this("123",555);
+        System.out.println("Three params");
         setAccountNumber(accountNumber);
         setBalance(balance);
     this.accountOwner = accountOwner;
     }
     public Account(String accountNumber, double balance){
+        System.out.println("Two params");
         setAccountNumber(accountNumber);
         setBalance(balance);
     }
 
     public Account(String accountOwner){
         this("123123",1000);
+        System.out.println("One params");
         setAccountNumber(accountOwner);
     }
 
+
+
     public void setAccountNumber(String accountNumber){
-        if (accountNumber != null && accountNumber.length() == 10 ){
+        if (accountNumber != null ){
             this.accountNumber = accountNumber;
         }else {
             System.out.println("Invalid account number ");
@@ -42,8 +48,6 @@ public class Account {
     public void setAccountOwner(String accountOwner){
         if (accountOwner != null ){
             this.accountOwner = accountOwner;
-        }else {
-            System.out.println("Invalid account owner");
         }
     }
 
